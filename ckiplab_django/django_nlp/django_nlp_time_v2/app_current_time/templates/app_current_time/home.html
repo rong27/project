@@ -1,0 +1,69 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<head>
+    <title>This is my django site.</title>
+    <style>
+        body {
+            background-color: lightyellow;
+        }
+
+        em {
+            color: LightSeaGreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Bootstrap4 Page</h1>
+    <p>This is a bootstrap page.</p>
+
+    <div class="row">
+
+        <!-- row .. col-lg-6 .. card -->
+        <div class="col-12 mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h6 text-uppercase mb-0">Current Time</h3>
+                </div>
+                <div class="card-body">
+
+                    <h2>Current time from backend</h2>
+                    <em>{{ current_time }}</em>
+
+                </div>
+            </div>
+        </div><!-- end of card -->
+
+        <!-- row .. col-lg-6 .. card -->
+        <div class="col-lg-4 mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h6 text-uppercase mb-0">Messages</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Message 顯示訊息 -->
+                    <ul id="message">
+                        <li>Message 1</li>
+                        <li>Message 2</li>
+                        <li>Message 3</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- 區塊結束-->
+
+    </div><!-- row -->
+</div> <!-- container -->
+
+</body>
+</html>

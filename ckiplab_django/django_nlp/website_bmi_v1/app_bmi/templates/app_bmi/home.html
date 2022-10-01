@@ -1,0 +1,107 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<head>
+    <title>Get BMI</title>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>BMI Calculation</h1>
+    <label>How bmi is calculated? bmi = weight/(height*height)</label>
+
+    <div class="row">
+
+        <!-- row .. col-lg-6 .. card -->
+        <div class="col-lg-4 mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h6 text-uppercase mb-0">Calculate your BMI</h3>
+                </div>
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label>Height(cm)</label>
+                        <input class="form-control" id="height" name="height" value="180" placeholder="Height(cm)">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Weight(kg)</label>
+                        <input class="form-control" id="weight" name="weight" value="75" placeholder="Weight(kg)">
+                        <small>We will not keep your weight and height information</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btn_get_bmi">Submit(Ajax)</button>
+
+
+                </div>
+            </div>
+        </div><!-- end of card-->
+
+
+        <!-- row .. col-lg-6 .. card -->
+        <div class="col-lg-4 mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="h6 text-uppercase mb-0">Your BMI</h3>
+                </div>
+                <div class="card-body">
+                    <h2 id="yourbmi">Your bmi will be shown here.</h2>
+                </div>
+            </div>
+        </div><!-- end of card -->
+
+
+    </div><!-- row -->
+</div> <!-- container -->
+
+</body>
+</html>
+
+<!-- java scrip-->
+<!-- jQuery js-->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<!-- chartjs s-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+<!-- Your Javascript codes -->
+<script>
+
+    //** on click event for submit button
+    $('#btn_get_bmi').on('click', function () {
+        // alert("You click this button!")
+        // $('#myForm').trigger('submit'); # form submit
+
+        $('#yourbmi').empty();
+        $('#yourbmi').append("here is your bmi!");
+        let height = $('#height').val();
+        let weight = $('#weight').val();
+
+        jQuery.ajax({
+
+            type: "POST",
+            url: "api_bmi",
+            data: {
+                "height": height,
+                "weight": weight,
+            }, //pass to server
+            success: function (received) {
+                const result = received['yourbmi'];
+
+                $('#yourbmi').empty();
+                $('#yourbmi').append("Your bmi: " + result);
+
+            }, //success function
+
+        });//ajax
+
+    });// btn on click event
+</script>
+
