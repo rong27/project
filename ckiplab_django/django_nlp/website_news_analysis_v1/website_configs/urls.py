@@ -18,4 +18,6 @@ from django.urls import include
 
 urlpatterns = [
     path('topword/', include('app_top_keyword.urls')),
+    path('topperson/', include('app_top_person.urls')),
+    path('topner/', include('app_top_ner.urls')),
 ]
