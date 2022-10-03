@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'app_top_keyword',
     'app_top_person',
     'app_top_ner',
+    'app_user_keyword',
+    'app_user_keyword_association',
+    'app_userkey_sentiment',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)

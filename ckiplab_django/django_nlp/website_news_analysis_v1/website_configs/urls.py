@@ -20,4 +20,7 @@ urlpatterns = [
     path('topword/', include('app_top_keyword.urls')),
     path('topperson/', include('app_top_person.urls')),
     path('topner/', include('app_top_ner.urls')),
+    path('userkeyword/', include('app_user_keyword.urls')),
+    path('userkeyword_assoc/', include('app_user_keyword_association.urls')),
+    path('userkeyword_sentiment/', include('app_userkey_sentiment.urls')),
 ]
