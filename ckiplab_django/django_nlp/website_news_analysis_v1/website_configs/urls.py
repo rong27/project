@@ -23,4 +23,6 @@ urlpatterns = [
     path('userkeyword/', include('app_user_keyword.urls')),
     path('userkeyword_assoc/', include('app_user_keyword_association.urls')),
     path('userkeyword_sentiment/', include('app_userkey_sentiment.urls')),
+    path('news_rcmd/', include('app_news_rcmd.urls')),
+    path('', include('app_leaderboard.urls')),
 ]

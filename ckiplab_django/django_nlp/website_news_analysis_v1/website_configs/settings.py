@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'app_user_keyword',
     'app_user_keyword_association',
     'app_userkey_sentiment',
+    'app_news_rcmd',
+    'app_leaderboard',
 ]
 
 MIDDLEWARE = [
