@@ -1,0 +1,8 @@
+name|value
+freqByDate|[[{'x': '2022-09-29', 'y': 8}], [{'x': '2022-09-29', 'y': 7}], [{'x': '2022-09-29', 'y': 1}]]
+pkName|['國民黨', '民進黨', '民眾黨']
+color|['blue', 'green', 'red']
+photo|['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Emblem_of_the_Kuomintang.svg/225px-Emblem_of_the_Kuomintang.svg.png', 'https://upload.wikimedia.org/wikipedia/zh/thumb/c/c1/Emblem_of_Democratic_Progressive_Party_%28new%29.svg/225px-Emblem_of_Democratic_Progressive_Party_%28new%29.svg.png', 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Emblem_of_Taiwan_People%27s_Party_2019.svg/225px-Emblem_of_Taiwan_People%27s_Party_2019.svg.png']
+freqByCate|[[8, 5, 1, 0, 0, 2], [7, 4, 0, 0, 1, 2], [1, 0, 0, 1, 0, 0]]
+category|['全部', '政治', '兩岸', '產經', '生活', '社會']
+sentiInfo|[[12, 12, 75], [0, 14, 85], [0, 0, 100]]
