@@ -1,10 +1,10 @@
 # 專案內容說明：
 
-## titanic : 108大數據分析學士學分班第01期_作業
+## titanic
 
  * 透過統計圖表呈現倖存人數、船票等級等的分布
 
-## ckiplab_django : 109-2 NKUST 商業智慧與巨量資料分析_作業
+## ckiplab_django 
 
 a) django_nlp :
 
